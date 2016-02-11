@@ -1,0 +1,59 @@
+/* _style.scss
+
+The main Sass-sheet for this project.
+---------------------------------------- */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #efefef;
+}
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  font-family: 'Helvetica';
+  font-size: 5em;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+
+  animation: fontSwap 4s ease-out forwards;
+
+  span {
+    opacity: 1;
+    animation: lightsOut .75s ease-out forwards;
+    animation-delay: 3.25s;
+  }
+}
+
+@keyframes lightsOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fontSwap {
+  0%, 15%, 45%, 65%, 90% {
+    font-family: 'Helvetica';
+  }
+
+  5%, 20%, 35%, 60%, 80% {
+    font-family: 'Times New Roman';
+  }
+
+  10%, 17.5%, 40%, 55%, 70% {
+    font-family: 'Tahoma';
+  }
+
+  12%, 25%, 38%, 50%, 85%, 95% {
+    font-family: 'Lucida Sams Unicode';
+  }
+}
