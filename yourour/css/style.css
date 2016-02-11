@@ -1,0 +1,136 @@
+/* _style.scss
+
+The main Sass-sheet for this project.
+---------------------------------------- */
+/* Main Styles
+---------------------------------------- */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica';
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  font-family: 'Helvetica';
+  font-size: 5em;
+  text-align: center; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #efefef; }
+
+/* Animation classes
+---------------------------------------- */
+.a--lights-out {
+  opacity: 1;
+  -webkit-animation: lightsOut .5s ease-out forwards;
+          animation: lightsOut .5s ease-out forwards;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s; }
+
+.a--font-swap {
+  -webkit-animation: fontSwap 4s ease-out forwards;
+          animation: fontSwap 4s ease-out forwards; }
+
+/* Form
+---------------------------------------- */
+form {
+  display: table;
+  width: 100%;
+  height: 50vh;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  font-size: 1.25rem;
+  background-color: #c8dadf; }
+
+.box__input {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+
+.box__input input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none; }
+
+.box.has-advanced-upload {
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear; }
+
+.box.has-advanced-upload .box__dragndrop {
+  display: inline; }
+
+.box.is-dragover {
+  background-color: #a8c4cc; }
+
+.box.is-uploading .box__input {
+  visibility: none; }
+
+.box.is-uploading .box__uploading {
+  display: block; }
+
+/* Keyframes
+---------------------------------------- */
+@-webkit-keyframes lightsOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes lightsOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fontSwap {
+  0%, 15%, 45%, 65%, 90% {
+    font-family: 'Helvetica'; }
+  5%, 20%, 35%, 60%, 80% {
+    font-family: 'Times New Roman'; }
+  10%, 17.5%, 40%, 55%, 70% {
+    font-family: 'Tahoma'; }
+  12%, 25%, 38%, 50%, 85%, 95% {
+    font-family: 'Lucida Sans Unicode'; }
+  14%, 28%, 42%, 55%, 58%, 92% {
+    font-family: 'Georgia'; }
+  22%, 34%, 47.5%, 75% {
+    font-family: 'Courier'; }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    font-weight: bold; } }
+
+@keyframes fontSwap {
+  0%, 15%, 45%, 65%, 90% {
+    font-family: 'Helvetica'; }
+  5%, 20%, 35%, 60%, 80% {
+    font-family: 'Times New Roman'; }
+  10%, 17.5%, 40%, 55%, 70% {
+    font-family: 'Tahoma'; }
+  12%, 25%, 38%, 50%, 85%, 95% {
+    font-family: 'Lucida Sans Unicode'; }
+  14%, 28%, 42%, 55%, 58%, 92% {
+    font-family: 'Georgia'; }
+  22%, 34%, 47.5%, 75% {
+    font-family: 'Courier'; }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    font-weight: bold; } }
+/*# sourceMappingURL=style.css.map */

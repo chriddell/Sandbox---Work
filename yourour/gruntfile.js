@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
     watch: {
       sass: {
-        files: ['./sass/*.scss'],
+        files: ['./css/sass/*.scss'],
         tasks: ['sass:dev', 'autoprefixer:dev']
       }
     },
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
           sourceMap: true
         },
         files: {
-          './style.css': './sass/style.scss'
+          './css/style.css': './css/sass/style.scss'
         }
       }
     },
@@ -29,8 +29,8 @@ module.exports = function (grunt) {
           map: true, 
           browsers: ['ie >= 8', '> 2%']
         }, 
-        src: './style.css',
-        dest: './style.css'
+        src: './css/style.css',
+        dest: './css/style.css'
       }
     }, 
 
@@ -38,7 +38,7 @@ module.exports = function (grunt) {
       dev: {
         bsFiles: {
           src: [
-            './style.css'
+            './css/style.css'
           ]
         },
         options: {
