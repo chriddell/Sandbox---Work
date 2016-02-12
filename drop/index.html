@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Upload a file - OTM</title>
+  <title>Upload a file - preferably a GIF...</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
   <link rel="stylesheet" href="css/style.css"/>
@@ -117,9 +117,9 @@
             cache:        false,
             contentType:  false,
             processData:  false,
-            complete: function( data, response ) {
+            complete: function( data ) {
               $form.removeClass( 'is-uploading' );
-              $('.display').append('<img src="' + data.responseText + '"/>'); // this should be in success
+              $('.display').prepend('<img src="' + data.responseText + '"/>'); // this should be in success
             },
             success: function( data ) {
               $form.addClass( data.success == true ? 'is-success' : 'is-error' );

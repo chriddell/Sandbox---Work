@@ -21,6 +21,8 @@ body {
   margin: 0 auto; }
 
 h1 {
+  margin-top: 20px;
+  margin-top: 10vh;
   text-align: center; }
 
 /* Form
@@ -60,7 +62,8 @@ label strong:hover {
   display: inline; }
 
 .box.is-dragover {
-  background-color: #a8c4cc; }
+  background-color: #a8c4cc;
+  outline-offset: 0px; }
 
 .box.is-uploading .box__input {
   display: none; }
