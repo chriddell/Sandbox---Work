@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Your brand</title>
+  <title>Upload a file - OTM</title>
   <link rel="icon" type="image/png" href="favicon.png">
 
   <link rel="stylesheet" href="css/style.css"/>
@@ -8,10 +8,11 @@
 </head>
 <body>
   <div class="container">
+    <h1>File Upload</h1>
     <!-- Form -->
     <form class="box" method="post" action="upload.php" enctype="multipart/form-data">
       <div class="box__input">
-        <input class="box__file" type="file" name="uploadedFile" id="file" data-multiple-caption="{count} files selected" />
+        <input class="box__file" type="file" name="uploadedFiles[]" id="file" data-multiple-caption="{count} files selected" multiple />
         <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
         <button class="box__button" type="submit">Upload</button>
       </div>
@@ -103,7 +104,7 @@
             url:          $form.attr( 'action' ),
             type:         $form.attr( 'method' ),
             data:         ajaxData,
-            dataType:     'html',
+            dataType:     'json',
             cache:        false,
             contentType:  false,
             processData:  false,
@@ -113,9 +114,10 @@
             success: function( data ) {
               $form.addClass( data.success == true ? 'is-success' : 'is-error' );
               if( !data.success ) $errorMsg.text( data.error );
+              consoloe.log(data);
             },
-            error: function(data) {
-              console.log( 'Error. Please, contact the webmaster!' );
+            error: function( data ) {
+              console.log( data.responseText );
             }
           });
         } else {
@@ -137,7 +139,6 @@
 
 
       // restart the form if has a state of error/success
-
       $restart.on( 'click', function( e ) {
         e.preventDefault();
         $form.removeClass( 'is-error is-success' );
