@@ -4,17 +4,21 @@ The main Sass-sheet for this project.
 ---------------------------------------- */
 /* Main Styles
 ---------------------------------------- */
+* {
+  box-sizing: border-box; }
+
 body {
   padding: 0;
   margin: 0;
+  background-color: #efefef;
   font-family: 'Courier';
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased; }
 
 .container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #efefef; }
+  max-width: 940px;
+  padding: 0 10px;
+  margin: 0 auto; }
 
 h1 {
   text-align: center; }
@@ -23,13 +27,14 @@ h1 {
 ---------------------------------------- */
 form {
   display: table;
-  width: 80vw;
+  width: 100%;
   height: 25vh;
   min-height: 200px;
-  margin: 0 10vw;
   font-size: 1.25rem;
-  background-color: #c8dadf;
-  box-sizing: border-box; }
+  background-color: #c8dadf; }
+
+label strong:hover {
+  cursor: pointer; }
 
 .box__input,
 .box__uploading,
@@ -38,14 +43,6 @@ form {
   display: table-cell;
   text-align: center;
   vertical-align: middle; }
-
-.box__input input {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1; }
 
 .box__dragndrop,
 .box__uploading,
@@ -70,4 +67,18 @@ form {
 
 .box.is-uploading .box__uploading {
   display: table-cell; }
+
+.input--hidden {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+/* Display
+---------------------------------------- */
+.display img {
+  padding: 10px;
+  height: 300px; }
 /*# sourceMappingURL=style.css.map */
