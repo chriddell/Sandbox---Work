@@ -13,7 +13,7 @@ canvas.onselectstart = function() { return false; };
 canvas.unselectable = "on";
 canvas.style.MozUserSelect = "none";
 
-canvas.onmouseenter = function( e ) {
+canvas.onmousedown = function( e ) {
   mDown = true;
   ctx.strokeStyle = Color;
   ctx.lineWidth = 3;
@@ -22,7 +22,7 @@ canvas.onmouseenter = function( e ) {
   ctx.moveTo( e.pageX - Position( canvas ).left, e.pageY - 5 );
 }
     
-canvas.onmouseleave = function() { 
+canvas.onmouseup = function() { 
   mDown = false; 
 };
 
@@ -59,9 +59,12 @@ function init() {
 
   resizeCanvas();         //resize the canvas-Element
   window.onresize = function()  { resizeCanvas(); }
+
 }
 
 function resizeCanvas() {
+
   ctx.canvas.width  = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
+  
 }
