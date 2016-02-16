@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier';
+  background-color: #efefef;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background-color: darken(#efefef, 5%);
+}
+.canvas__wrapper {
+  display: inline-block;
+  background-color: darken(#efefef, 5%);
+}
+
+span {
+  display: inline-block;
+  margin: 0 0 20px 0;
+}
