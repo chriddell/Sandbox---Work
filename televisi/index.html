@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Televis | Sandbox</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <video autoplay muted data-visible="hidden" data-id="1" class="video">
+    <source src="assets/video/beast.mp4" type="video/mp4">
+  </video>
+  <video autoplay muted data-visible="visible" data-id="2" class="video">
+    <source src="assets/video/melfunctions.mp4" type="video/mp4">
+  </video>
+  <!-- Video nav -->
+  <ul class="video-nav">
+    <li data-id="1">Channel 1</li>
+    <li data-id="2">Channel 2</li>
+  </ul>
+</body>
+
+<!-- Live reload -->
+<script src="//localhost:35729/livereload.js"></script>
+
+</html>
