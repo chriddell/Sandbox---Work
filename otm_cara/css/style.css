@@ -235,7 +235,7 @@ body {
   width: 200%;
   height: 200%; }
 
-.carousel .item > * {
+.carousel .item > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -244,4 +244,17 @@ body {
   margin: auto;
   min-width: 50%;
   min-height: 50%; }
+
+.carousel .item > video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
 /*# sourceMappingURL=style.css.map */
