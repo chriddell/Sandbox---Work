@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         files: ['./css/sass/*.scss', './index.html', './js/app.js'],
         tasks: ['sass:dev', 'autoprefixer:dev'],
         options: {
-          liveReload: true
+          livereload: true
         }
       }
     },
