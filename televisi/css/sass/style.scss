@@ -1,0 +1,47 @@
+/* style.scss
+
+The main stylesheet for this project.
+---------------------------------------- */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier';
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+video[data-visible="hidden"]{
+  visibility: hidden;
+}
+
+.video-nav {
+  position: fixed;
+  margin: 0;
+  bottom: 20px;
+  right: 60px;
+  color: white;
+  list-style: none;
+}
+.video-nav > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.brand {
+  position: fixed;
+  top: 20px;
+  left: 5%;
+}
